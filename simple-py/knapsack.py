@@ -1,3 +1,6 @@
+from typing import List
+
+
 def knapsack_0_1(wt, val, W, N, dp):
     if W == 0 or N == 0:
         return 0
@@ -16,19 +19,39 @@ def knapsack_0_1(wt, val, W, N, dp):
     return dp[W][N]
 
 
-def isSubsetSum(set, n, sum):
-    subset = ([[False for i in range(sum + 1)]
-               for i in range(n + 1)])
+def kanpsack_0_1_top_down(wt, val, W, N):
+    dp = [[-1 for j in range(W + 1)] for i in range(N+1)]
 
-    for i in range(n+1):
-        subset[i][0] = True
+    for i in range(N+1):
+        dp[i][0] = 0
 
-    for i in range(1, n+1):
-        for j in range(1, sum+1):
-            if set[i-1] <= j:
-                subset[i][j] = subset[i-1][j] or subset[i-1][j-set[i-1]]
+    for j in range(W+1):
+        dp[0][j] = 0
+
+    for n in range(1, N+1):
+        for w in range(1, W + 1):
+
+            if wt[n-1] <= w:
+                dp[n][w] = max(val[n-1] + dp[n-1][w-wt[n-1]], dp[n-1][w])
             else:
-                subset[i][j] = subset[i-1][j]
+                dp[n][w] = dp[n-1][w]
+
+    return dp[N][W]
+
+
+def isSubsetSum(elements: List[int], N: int, sum: int):
+    subset = ([[False for _ in range(sum + 1)]
+               for _ in range(N + 1)])
+
+    for n in range(N+1):
+        subset[n][0] = True
+
+    for n in range(1, N+1):
+        for s in range(1, sum+1):
+            if elements[n-1] <= s:
+                subset[n][s] = subset[n-1][s] or subset[n-1][s-elements[n-1]]
+            else:
+                subset[n][s] = subset[n-1][s]
 
 
 # Example of usage:
@@ -44,5 +67,17 @@ def main():
     print("Maximum value in Knapsack =", result)
 
 
+def top_down_test():
+    W = 3
+    wt = [1, 2]
+    val = [60, 80]
+    N = len(wt)
+
+    dp = [[-1 for _ in range(N+1)] for _ in range(W+1)]
+
+    result = kanpsack_0_1_top_down(wt, val, W, N)
+    print("Maximum value in Knapsack =", result)
+
+
 if __name__ == "__main__":
-    main()
+    top_down_test()
