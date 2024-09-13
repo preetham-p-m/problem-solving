@@ -8,19 +8,19 @@ class TreeNode:
         self.right = right
 
 
-def inorder(root: Optional[TreeNode], list: List[int]):
+def in_order(root: Optional[TreeNode], list: List[int]):
 
     if (root is None):
         return
 
-    inorder(root.left, list)
+    in_order(root.left, list)
     list.append(root.val)
-    inorder(root.right, list)
+    in_order(root.right, list)
 
 
-def inorderTraversal(self, root: Optional[TreeNode]) -> List[int]:
+def in_orderTraversal(self, root: Optional[TreeNode]) -> List[int]:
     list: List[int] = []
 
-    inorder(root, list)
+    in_order(root, list)
 
     return list

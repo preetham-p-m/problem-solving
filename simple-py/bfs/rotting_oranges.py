@@ -7,7 +7,7 @@ def orangesRotting(self, grid: List[List[int]]) -> int:
     m, n = len(grid), len(grid[0])
 
     fresh_count = 0
-    minutes_to_rott_all = -1
+    minutes_to_rot_all = -1
     queue = deque()
 
     for i in range(len(grid)):
@@ -21,7 +21,7 @@ def orangesRotting(self, grid: List[List[int]]) -> int:
         return 0
 
     while queue:
-        minutes_to_rott_all += 1
+        minutes_to_rot_all += 1
 
         for _ in range(len(queue)):
             i, j = queue.popleft()
@@ -37,4 +37,4 @@ def orangesRotting(self, grid: List[List[int]]) -> int:
     if fresh_count > 0:
         return -1
     else:
-        return minutes_to_rott_all
+        return minutes_to_rot_all
