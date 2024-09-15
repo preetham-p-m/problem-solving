@@ -20,7 +20,7 @@ def knapsack_0_1(wt, val, W, N, dp):
 
 
 def knapsack_0_1_top_down(wt, val, W, N):
-    dp = [[-1 for j in range(W + 1)] for i in range(N+1)]
+    dp = [[-1 for _ in range(W + 1)] for _ in range(N+1)]
 
     for i in range(N+1):
         dp[i][0] = 0
@@ -80,4 +80,5 @@ def top_down_test():
 
 
 if __name__ == "__main__":
+    main()
     top_down_test()
