@@ -19,7 +19,7 @@ def knapsack_0_1(wt, val, W, N, dp):
     return dp[W][N]
 
 
-def kanpsack_0_1_top_down(wt, val, W, N):
+def knapsack_0_1_top_down(wt, val, W, N):
     dp = [[-1 for j in range(W + 1)] for i in range(N+1)]
 
     for i in range(N+1):
@@ -75,7 +75,7 @@ def top_down_test():
 
     dp = [[-1 for _ in range(N+1)] for _ in range(W+1)]
 
-    result = kanpsack_0_1_top_down(wt, val, W, N)
+    result = knapsack_0_1_top_down(wt, val, W, N)
     print("Maximum value in Knapsack =", result)
 
 
