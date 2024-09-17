@@ -10,7 +10,7 @@ class TreeNode:
 
 def in_order(root: Optional[TreeNode], list: List[int]):
 
-    if (root is None):
+    if root is None:
         return
 
     in_order(root.left, list)
