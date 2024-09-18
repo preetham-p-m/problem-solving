@@ -1,7 +1,16 @@
 from typing import List
 
 
-def count_subset_sum(elements: List[int], N: int, S: int) -> int:
+def count_subset_with_given_difference(elements: List[int], D: int) -> int:
+
+    total_sum = sum(elements)
+
+    if (D + total_sum) % 2 != 0:
+        return 0
+
+    N = len(elements)
+    S = (D + total_sum) // 2
+
     dp = [[0 for _ in range(S + 1)] for _ in range(N + 1)]
 
     for n in range(N + 1):
