@@ -33,6 +33,3 @@ def minimumDifference(nums: List[int]) -> int:
         minimum_value = min(abs(sum_of_all - 2 * i), minimum_value)
 
     return minimum_value
-
-
-minimumDifference([2, -1, 0, 4, -2, -9])
