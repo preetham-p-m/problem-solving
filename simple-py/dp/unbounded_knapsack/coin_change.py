@@ -4,7 +4,8 @@ from typing import List
 def min_number_of_coin(coins: List[int], amount: int) -> int:
 
     N = len(coins)
-    dp = [[float("infinity") for _ in range(amount + 1)] for _ in range(N + 1)]
+    # It is initialized to (infinity - 1) because in the following step, if we add +1 to infinity, it will become a negative number. Therefore, we initialize it to infinity - 1.
+    dp = [[float("infinity") - 1 for _ in range(amount + 1)] for _ in range(N + 1)]
 
     # The minimum number of coins needed to make 0 rupees is 0.
     for n in range(N + 1):
