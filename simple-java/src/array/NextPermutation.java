@@ -1,7 +1,6 @@
 package array;
 
 import java.util.Arrays;
-
 import util.Array;
 
 public class NextPermutation {
@@ -13,17 +12,17 @@ public class NextPermutation {
     }
 
     public static int[] start(int[] array) {
-        int lenght = array.length;
+        int length = array.length;
         int index = -1;
 
-        for (int i = lenght - 2; i >= 0; i--) {
+        for (int i = length - 2; i >= 0; i--) {
             if (array[i] < array[i + 1]) {
                 index = i;
                 break;
             }
         }
 
-        for (int i = lenght - 1; i >= index; i--) {
+        for (int i = length - 1; i >= index; i--) {
             if (array[index] < array[i]) {
                 Array.swap(array, index, i);
                 break;

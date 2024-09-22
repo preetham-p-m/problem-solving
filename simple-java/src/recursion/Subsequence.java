@@ -3,7 +3,7 @@ package recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Subsequesnce {
+public class Subsequence {
 
     public static void main(String[] args) {
         var list = start("abc");

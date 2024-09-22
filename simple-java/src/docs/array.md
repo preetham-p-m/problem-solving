@@ -55,7 +55,7 @@ Use (n-1)C(r-1) formula to calculate the value
 
 ### Print Row
 
-First element will be aloways 1. We need to multiply by (row-col) and divide by (col). Do some calculation using pen and paper for understanding. Check the `getRow` method.
+First element will be always 1. We need to multiply by (row-col) and divide by (col). Do some calculation using pen and paper for understanding. Check the `getRow` method.
 
 ### Print Entire Pascal Triangle
 
@@ -92,17 +92,17 @@ Video Link: https://www.youtube.com/watch?v=JDOXKqF60RQ&t=682s
 
 ```
 public int[] run(int[] array) {
-    int lenght = array.length;
+    int length = array.length;
     int index = -1;
 
-    for (int i = lenght - 2; i >= 0; i--) {
+    for (int i = length - 2; i >= 0; i--) {
         if (array[i] < array[i + 1]) {
             index = i;
             break;
         }
     }
 
-    for (int i = lenght - 1; i >= index; i--) {
+    for (int i = length - 1; i >= index; i--) {
         if (array[index] < array[i]) {
             Array.swap(array, index, i);
             break;

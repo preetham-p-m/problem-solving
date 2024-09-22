@@ -52,7 +52,7 @@ public class App {
             }
         }
 
-        List<Integer> result = new ArrayList<Integer>();
+        List<Integer> result = new ArrayList<>();
         while (!stack.isEmpty()) {
             result.add(stack.pop());
         }
@@ -60,7 +60,7 @@ public class App {
         return result.stream().mapToInt(i -> i).toArray();
     }
 
-    static int[] topoSortUsingBSF(int V, ArrayList<ArrayList<Integer>> adj) {
+    static int[] topoSortUsingBFS(int V, ArrayList<ArrayList<Integer>> adj) {
 
         int[] inDegree = new int[V];
 
@@ -70,7 +70,7 @@ public class App {
             }
         }
 
-        Queue<Integer> queue = new LinkedList<Integer>();
+        Queue<Integer> queue = new LinkedList<>();
         for (int i = 0; i < V; i++) {
             if (inDegree[i] == 0) {
                 queue.add(i);

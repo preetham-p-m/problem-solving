@@ -31,9 +31,9 @@ public class RepeatingAndMissing {
 
 		long rPd = r2Md2 / rMd;
 
-		long repeting = (rPd + rMd) / 2;
-		long duplicate = rPd - repeting;
+		long repeating = (rPd + rMd) / 2;
+		long duplicate = rPd - repeating;
 
-		return new int[] { (int) repeting, (int) duplicate };
+		return new int[] { (int) repeating, (int) duplicate };
 	}
 }

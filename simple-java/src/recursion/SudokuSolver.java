@@ -2,7 +2,7 @@ package recursion;
 
 import java.util.Arrays;
 
-public class SudukoSolver {
+public class SudokuSolver {
     public static void main(String[] args) {
         char[][] board = new char[][] {
                 { '5', '3', '.', '.', '7', '.', '.', '.', '.' },

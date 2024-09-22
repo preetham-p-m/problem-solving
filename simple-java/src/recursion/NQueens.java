@@ -13,7 +13,7 @@ public class NQueens {
 
     public static List<List<String>> start(int n) {
         var ans = new ArrayList<List<String>>();
-        var baord = new ArrayList<StringBuilder>();
+        var board = new ArrayList<StringBuilder>();
 
         StringBuilder builder = new StringBuilder();
         for (int i = 0; i < n; i++) {
@@ -21,14 +21,14 @@ public class NQueens {
         }
         String stringToFill = builder.toString();
         for (int i = 0; i < n; i++) {
-            baord.add(new StringBuilder(stringToFill));
+            board.add(new StringBuilder(stringToFill));
         }
 
         boolean[] left = new boolean[n];
         boolean[] leftUpper = new boolean[2 * n - 1];
         boolean[] leftLower = new boolean[2 * n - 1];
 
-        calculatePossibility(n, ans, 0, baord, left, leftUpper, leftLower);
+        calculatePossibility(n, ans, 0, board, left, leftUpper, leftLower);
 
         return ans;
     }

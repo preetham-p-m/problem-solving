@@ -1,5 +1,6 @@
 {
   "java.project.sourcePaths": ["simple-java/src"],
   "java.project.outputPath": "simple-java/bin",
-  "java.project.referencedLibraries": ["simple-java/lib/**/*.jar"]
+  "java.project.referencedLibraries": ["simple-java/lib/**/*.jar"],
+  "cSpell.words": ["nums"]
 }

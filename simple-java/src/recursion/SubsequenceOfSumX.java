@@ -9,7 +9,7 @@ public class SubsequenceOfSumX {
         int[] array = new int[] { 1, 2, 1 };
         var result = start(array, 2);
 
-        var result2 = uniqeSubsequnece(array);
+        var result2 = uniqueSubsequence(array);
         System.out.println(result2.toString());
 
         System.out.println(result.toString());
@@ -88,16 +88,16 @@ public class SubsequenceOfSumX {
     // #endregion
 
     // #region Unique SubSequence
-    public static List<List<Integer>> uniqeSubsequnece(int[] array) {
+    public static List<List<Integer>> uniqueSubsequence(int[] array) {
         var list = new ArrayList<List<Integer>>();
         var temp = new ArrayList<Integer>();
 
-        uniqeSubsequnece(array, 0, temp, list);
+        SubsequenceOfSumX.uniqueSubsequence(array, 0, temp, list);
 
         return list;
     }
 
-    public static void uniqeSubsequnece(int[] array, int index, List<Integer> tempList, List<List<Integer>> list) {
+    public static void uniqueSubsequence(int[] array, int index, List<Integer> tempList, List<List<Integer>> list) {
         list.add(new ArrayList<>(tempList));
 
         for (int i = index; i < array.length; i++) {
@@ -106,7 +106,7 @@ public class SubsequenceOfSumX {
             }
 
             tempList.add(array[i]);
-            uniqeSubsequnece(array, i + 1, tempList, list);
+            SubsequenceOfSumX.uniqueSubsequence(array, i + 1, tempList, list);
             tempList.removeLast();
         }
     }
