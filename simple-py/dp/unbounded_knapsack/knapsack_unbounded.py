@@ -3,7 +3,7 @@ from typing import List
 
 def knapsack_unbounded(weights: List[int], profit: List[int], W: int):
 
-    N = len(profit)
+    N = len(weights)
 
     dp = [[0 for _ in range(W + 1)] for _ in range(N + 1)]
 
