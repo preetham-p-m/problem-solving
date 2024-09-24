@@ -40,3 +40,38 @@ def longestCommonSubsequenceUsingTabulation(text1: str, text2: str) -> int:
                 dp[n][m] = max(dp[n][m - 1], dp[n - 1][m])
 
     return dp[N][M]
+
+
+def printLongestCommonSubsequence(text1: str, text2: str) -> int:
+    N, M = len(text1), len(text2)
+
+    dp = [[0 for _ in range(M + 1)] for _ in range(N + 1)]
+
+    for n in range(N + 1):
+        for m in range(M + 1):
+            if text1[n - 1] == text2[m - 1]:
+                dp[n][m] = 1 + dp[n - 1][m - 1]
+            else:
+                dp[n][m] = max(dp[n - 1][m], dp[n][m - 1])
+
+    n, m = N, M
+    answer = ""
+
+    while n > 0 and m > 0:
+        if text1[n - 1] == text2[m - 1]:
+            answer = text1[n - 1] + answer
+            n -= 1
+            m -= 1
+        else:
+            if dp[n - 1][m] > dp[n][m - 1]:
+                n -= 1
+            else:
+                m -= 1
+
+    if len(answer) == 0:
+        raise RuntimeError("No common sub-sequence found.")
+
+    return answer
+
+
+print(printLongestCommonSubsequence("abc", "def"))
