@@ -47,8 +47,8 @@ def printLongestCommonSubsequence(text1: str, text2: str) -> int:
 
     dp = [[0 for _ in range(M + 1)] for _ in range(N + 1)]
 
-    for n in range(N + 1):
-        for m in range(M + 1):
+    for n in range(1, N + 1):
+        for m in range(1, M + 1):
             if text1[n - 1] == text2[m - 1]:
                 dp[n][m] = 1 + dp[n - 1][m - 1]
             else:
@@ -74,4 +74,4 @@ def printLongestCommonSubsequence(text1: str, text2: str) -> int:
     return answer
 
 
-print(printLongestCommonSubsequence("abc", "def"))
+print(printLongestCommonSubsequence("abc", "abc"))
