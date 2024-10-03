@@ -18,7 +18,13 @@ def minCut(s: str) -> int:
         minValue: int = float("infinity")
 
         for k in range(start, end):
-            temp = cut(s, start, k, dp) + cut(s, k + 1, end, dp) + 1
+            left = dp[start][k] if dp[start][k] != -1 else cut(s, start, k, dp)
+            dp[start][k] = left
+
+            right = dp[k + 1][end] if dp[k + 1][end] != -1 else cut(s, k + 1, end, dp)
+            dp[k + 1][end] = right
+
+            temp = left + right + 1
             minValue = min(temp, minValue)
 
         dp[start][end] = minValue
@@ -30,8 +36,4 @@ def minCut(s: str) -> int:
     return cut(s, 0, N, dp)
 
 
-print(
-    minCut(
-        "adabdcaebdcebdcacaaaadbbcadabcbeabaadcbcaaddebdbddcbdacdbbaedbdaaecabdceddccbdeeddccdaabbabbdedaaabcdadbdabeacbeadbaddcbaacdbabcccbaceedbcccedbeecbccaecadccbdbdccbcbaacccbddcccbaedbacdbcaccdcaadcbaebebcceabbdcdeaabdbabadeaaaaedbdbcebcbddebccacacddebecabccbbdcbecbaeedcdacdcbdbebbacddddaabaedabbaaabaddcdaadcccdeebcabacdadbaacdccbeceddeebbbdbaaaaabaeecccaebdeabddacbedededebdebabdbcbdcbadbeeceecdcdbbdcbdbeeebcdcabdeeacabdeaedebbcaacdadaecbccbededceceabdcabdeabbcdecdedadcaebaababeedcaacdbdacbccdbcece"
-    )
-)
+print(minCut("aab"))
