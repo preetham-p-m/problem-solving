@@ -5,10 +5,6 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class BFS {
-    public static void main(String[] args) {
-
-    }
-
     public ArrayList<Integer> bfsOfGraph(int V, ArrayList<ArrayList<Integer>> adj) {
         ArrayList<Integer> bfs = new ArrayList<>();
         boolean[] visited = new boolean[V];
