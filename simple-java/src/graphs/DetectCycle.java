@@ -17,6 +17,7 @@ public class DetectCycle {
     }
 
     // #region Using BFS
+
     boolean cycleUsingBFS(int node, ArrayList<ArrayList<Integer>> adj, boolean[] visited) {
         visited[node] = true;
 
@@ -41,7 +42,7 @@ public class DetectCycle {
         return false;
     }
 
-    public boolean isCycle(int V, ArrayList<ArrayList<Integer>> adj) {
+    public boolean isCycleUsingBFS(int V, ArrayList<ArrayList<Integer>> adj) {
         boolean[] visited = new boolean[V];
 
         for (int i = 0; i < V; i++) {
@@ -57,4 +58,37 @@ public class DetectCycle {
 
     // #endregion
 
+    // #region Using DFS
+
+    private boolean cycleUsingDFS(int node, int parentNode, ArrayList<ArrayList<Integer>> adj, boolean[] visited) {
+        visited[node] = true;
+
+        for (Integer adjNode : adj.get(node)) {
+            if (!visited[adjNode]) {
+                if (cycleUsingDFS(adjNode, node, adj, visited)) {
+                    return true;
+                }
+            } else if (adjNode != parentNode) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public boolean isCycleUsingDFS(int V, ArrayList<ArrayList<Integer>> adj) {
+        boolean[] visited = new boolean[V];
+
+        for (int i = 0; i < V; i++) {
+            if (!visited[i]) {
+                if (cycleUsingDFS(i, -1, adj, visited)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
+    }
+
+    // #endregion
 }
