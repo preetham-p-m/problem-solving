@@ -44,4 +44,10 @@ public class CourseSchedule2 {
 
         return list.size() == numCourses ? list.stream().mapToInt(Integer::intValue).toArray() : new int[0];
     }
+
+    public static void main(String[] args) {
+        var courseSchedule = new CourseSchedule2();
+        int[][] prerequisites = { { 1, 0 }, { 2, 1 }, { 3, 2 }, { 4, 3 }, { 1, 4 } };
+        courseSchedule.findOrder(5, prerequisites);
+    }
 }
