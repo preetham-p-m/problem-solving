@@ -25,13 +25,13 @@ public class MaximumSumSubArray {
 
             if (sum > maxSum) {
                 maxSum = sum;
-                ansStartIndex = start + 1;
+                ansStartIndex = start;
                 ansEndIndex = i;
             }
 
             if (sum <= 0) {
                 sum = 0;
-                start = i;
+                start = i + 1;
             }
         }
 
