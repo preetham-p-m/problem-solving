@@ -5,12 +5,12 @@ import java.util.List;
 
 import util.Array;
 
-public class AllPermutation {
+public class LC46_AllPermutation {
 
     public static void main(String[] args) {
         int[] array = new int[] { 1, 2, 3 };
 
-        AllPermutation allPermutation = new AllPermutation();
+        LC46_AllPermutation allPermutation = new LC46_AllPermutation();
 
         System.out.println(allPermutation.getPermutationWithSpace(array).toString());
 

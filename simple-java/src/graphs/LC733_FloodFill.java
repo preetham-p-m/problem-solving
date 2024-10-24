@@ -1,6 +1,6 @@
 package graphs;
 
-public class FloodFill {
+public class LC733_FloodFill {
 
     private int[] rows = new int[] { 0, 0, -1, 1 };
     private int[] columns = new int[] { -1, 1, 0, 0 };

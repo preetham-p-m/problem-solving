@@ -3,7 +3,7 @@ package graphs;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CourseSchedule1 {
+public class LC207_CourseSchedule1 {
 
     boolean cycleUsingDFS(int node, List<List<Integer>> adjList, boolean[] visited, boolean[] recStack) {
         visited[node] = true;

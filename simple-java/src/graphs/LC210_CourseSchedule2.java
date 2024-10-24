@@ -5,7 +5,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class CourseSchedule2 {
+public class LC210_CourseSchedule2 {
 
     public int[] findOrder(int numCourses, int[][] prerequisites) {
 
@@ -46,7 +46,7 @@ public class CourseSchedule2 {
     }
 
     public static void main(String[] args) {
-        var courseSchedule = new CourseSchedule2();
+        var courseSchedule = new LC210_CourseSchedule2();
         int[][] prerequisites = { { 1, 0 }, { 2, 1 }, { 3, 2 }, { 4, 3 }, { 1, 4 } };
         courseSchedule.findOrder(5, prerequisites);
     }

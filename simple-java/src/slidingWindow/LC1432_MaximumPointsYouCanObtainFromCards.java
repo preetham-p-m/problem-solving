@@ -1,6 +1,6 @@
 package slidingWindow;
 
-public class P1432_MaximumPointsYouCanObtainFromCards {
+public class LC1432_MaximumPointsYouCanObtainFromCards {
     public static int maxScore(int[] cardPoints, int k) {
         int n = cardPoints.length;
         int window = n - k;

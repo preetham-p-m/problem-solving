@@ -1,6 +1,6 @@
 package recursion;
 
-public class GasStation {
+public class LC134_GasStation {
 
     public int canCompleteCircuit(int[] gas, int[] cost) {
         int totalGas = 0;

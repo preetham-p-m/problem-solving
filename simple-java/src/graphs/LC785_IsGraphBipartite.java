@@ -3,7 +3,7 @@ package graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class IsGraphBipartite {
+public class LC785_IsGraphBipartite {
 
     private boolean checkIsBipartite(int[][] graph, int[] bipartite, int start) {
         Queue<Integer> queue = new LinkedList<>();

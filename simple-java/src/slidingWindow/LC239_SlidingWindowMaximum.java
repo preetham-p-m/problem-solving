@@ -3,7 +3,7 @@ package slidingWindow;
 import java.util.ArrayDeque;
 import java.util.Deque;
 
-public class SlidingWindowMaximum {
+public class LC239_SlidingWindowMaximum {
     public int[] maxSlidingWindow(int[] numbers, int k) {
         Deque<Integer> deque = new ArrayDeque<>();
 

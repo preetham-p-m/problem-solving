@@ -5,7 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SubstringWithConcatenationOfAllWords {
+public class LC30_SubstringWithConcatenationOfAllWords {
     public List<Integer> findSubstring(String s, String[] words) {
         Map<String, Integer> map = new HashMap<>();
         List<Integer> list = new ArrayList<>();

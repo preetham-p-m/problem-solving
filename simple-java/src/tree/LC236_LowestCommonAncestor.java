@@ -1,6 +1,6 @@
 package tree;
 
-public class LowestCommonAncestor {
+public class LC236_LowestCommonAncestor {
     public class TreeNode {
         int val;
         TreeNode left;

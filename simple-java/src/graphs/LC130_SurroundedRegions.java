@@ -2,7 +2,7 @@ package graphs;
 
 import java.util.Arrays;
 
-public class SurroundedRegions {
+public class LC130_SurroundedRegions {
 
     private int[] rowDir = { 0, 1, 0, -1 };
     private int[] colDir = { 1, 0, -1, 0 };
@@ -62,7 +62,7 @@ public class SurroundedRegions {
                 { 'O', 'X', 'O', 'X', 'O', 'X' }
         };
 
-        var surroundedRegions = new SurroundedRegions();
+        var surroundedRegions = new LC130_SurroundedRegions();
         surroundedRegions.solve(array);
 
         String result = Arrays.deepToString(array)

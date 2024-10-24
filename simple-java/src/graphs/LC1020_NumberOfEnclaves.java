@@ -3,7 +3,7 @@ package graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class NumberOfEnclaves {
+public class LC1020_NumberOfEnclaves {
     public class Pair {
 
         int first;

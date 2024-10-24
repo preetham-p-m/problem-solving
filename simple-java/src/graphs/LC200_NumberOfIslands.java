@@ -3,7 +3,7 @@ package graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class NumberOfIslands {
+public class LC200_NumberOfIslands {
 
     class Pair {
         int first;

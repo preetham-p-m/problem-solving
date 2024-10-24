@@ -3,7 +3,7 @@ package graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Matrix01 {
+public class LC542_Matrix01 {
     class Node {
         int first;
         int second;

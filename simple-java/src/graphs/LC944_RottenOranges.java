@@ -3,7 +3,7 @@ package graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class RottenOranges {
+public class LC944_RottenOranges {
 
     class Pair {
         int first;

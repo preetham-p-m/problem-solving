@@ -3,7 +3,7 @@ package recursion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class NQueens {
+public class LC51_NQueens {
     public static void main(String[] args) {
         var ans = start(4);
 

@@ -3,7 +3,7 @@ package graphs;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class NumberOfProvinces {
+public class LC547_NumberOfProvinces {
 
     private void bfs(int[][] isConnected, boolean[] visited, int startPoint) {
         Queue<Integer> queue = new LinkedList<>();
